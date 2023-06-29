@@ -29,11 +29,11 @@ module.exports = ({ env }) => {
     postgres: {
       connection: {
         connectionString: env('DATABASE_URL'),
-        host: env('DATABASE_HOST', 'localhost'),
+        host: env('DATABASE_HOST', 'dpg-cif0nud9aq09mhnvkq30-a'),
         port: env.int('DATABASE_PORT', 5432),
-        database: env('DATABASE_NAME', 'bitsonblog'),
-        user: env('DATABASE_USERNAME', 'postgres'),
-        password: env('DATABASE_PASSWORD', 'Davidpostgress@1#'),
+        database: env('DATABASE_NAME', 'bitson'),
+        user: env('DATABASE_USERNAME', 'bitson'),
+        password: env('DATABASE_PASSWORD', 'PW1LkfVv0cBAzRnZ9jhA8fgtMBCAz762'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
@@ -69,3 +69,22 @@ module.exports = ({ env }) => {
     },
   };
 };
+
+
+
+
+
+
+// module.exports = ({ env }) => ({
+//   connection: {
+//     client: 'postgres',
+//     connection: {
+//       host: env('DATABASE_HOST', 'dpg-cif0nud9aq09mhnvkq30-a.oregon-postgres.render.com'),
+//       port: env.int('DATABASE_PORT', 5432),
+//       database: env('DATABASE_NAME', 'bitson'),
+//       user: env('DATABASE_USERNAME', 'bitson'),
+//       password: env('DATABASE_PASSWORD', 'PW1LkfVv0cBAzRnZ9jhA8fgtMBCAz762'),
+//       ssl: env.bool('DATABASE_SSL', false),
+//     },
+//   },
+// });
